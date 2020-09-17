@@ -24,7 +24,7 @@ function createListItem() {
     var delBtn = document.createElement('button');
     var delX = document.createElement('i');
     delX.classList.add('fas', 'fa-times');
-    delBtn.classList.add('custBtn');
+    delBtn.classList.add('delBtn');
     delBtn.appendChild(delX);
     delBtn.addEventListener('click', delItem);
     li.append(delBtn);

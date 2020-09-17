@@ -60,7 +60,7 @@ ul {
 /* End container for input fields to add new list items */
   
 /* Custom buttons for textfield and list item buttons (> & X)*/
-.custBtn {
+.custBtn, .delBtn {
     position: absolute;
     top: 0px;
     right: 0px;
@@ -74,12 +74,12 @@ ul {
     transition: all .2s;
 }
     
-.custBtn:hover {
+.custBtn:hover, .delBtn:hover {
     color: #A6BFD1;
     cursor: pointer;
 }
   
-.custBtn:focus {
+.custBtn:focus, .delBtn:focus {
     outline: none;
 }
 /* End buttons */
@@ -93,14 +93,15 @@ ul {
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding: 10px 0 10px 20px;
     margin-bottom: 5px;
     font-size: 26px;
     background: #CAE9FF;
     border: 2px solid #6F808C;
     color: #6F808C;
-    height: 60px;
+    height: auto;
     width: 100%;
+    overflow: hidden;
     list-style: none;
     transition: all .2s;
 }
@@ -131,7 +132,16 @@ ul {
   
 /* End list items*/
 /* End container for list items */
-  
+@media screen and (max-width: 576px) {
+    .mainList .listItem {
+        font-size: 18px;
+    }
+
+    .delBtn {
+        height: 50px;
+    }    
+}
+
 @media screen and (max-width: 760px) {
     .container {
       height: 100%;
